@@ -7,7 +7,7 @@
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4 && this.status == 200) {
                         document.getElementById("emo").innerHTML = alert(this.responseText);
-                       alert(req.getAllResponseHeaders());
+                       alert(xhttp.getAllResponseHeaders());
             }
          };
          xhttp.open("GET", "https://syndication.twitter.com/settings", true);
