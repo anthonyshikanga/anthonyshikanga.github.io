@@ -1,5 +1,5 @@
 <script>
-websocket = new WebSocket('wss://www.smtp2go.com/pricing/')
+websocket = new WebSocket('wss://nexus-websocket-a.intercom.io/pubsub/5-OYuiJsF1VVv6XL0a1yf1piyMHWbWQH4ynbxO3GpJYuhfQgq9_xLbaJ98pDFAGFQhObs6CIEywClVbomPsLRSO5I-qXihfpIJn4W9?X-Nexus-New-Client=true&X-Nexus-Version=0.5.2&user_role=undefined/')
 websocket.onopen = start
 websocket.onmessage = handleReply
 function start(event) {
