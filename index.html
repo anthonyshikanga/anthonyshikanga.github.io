@@ -1,5 +1,5 @@
 <script>
-var webSocket = new WebSocket('wss://hub.yoti.com/channel/login');
+var webSocket = new WebSocket('wss://www.yotisign.com/ws/graphql');
 webSocket.onmessage = function(event) {
     alert(event.data);
 }
