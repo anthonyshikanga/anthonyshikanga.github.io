@@ -1,5 +1,5 @@
 <script>
-var webSocket = new WebSocket('https://ws.blockchain.info/coins');
+var webSocket = new WebSocket('wss.blockchain.info/coins');
 webSocket.onmessage = function(event) {
     alert(event.data);
 }
