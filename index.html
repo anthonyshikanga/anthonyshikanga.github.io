@@ -1,5 +1,5 @@
 <script>
-var webSocket = new webSocket('wss://api.bl3p.eu/1/BTCEUR/trades');
+var webSocket = new webSocket('wss://wsusdtm.bitbns.com/socket.io/?coin=BTC&EIO=3&transport=websocket');
 webSocket.onmessage = function(event) {
     alert(event.data);
 }
